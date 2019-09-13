@@ -1,0 +1,24 @@
+class Main{
+    private static int limit = 1000;
+    private static int three = 3;
+    private static int five = 5;
+
+    public static void main(String[] args){
+      int sum=0;
+      for(int i=1; i<limit; i++){
+
+        if(isDivisible(i, three) || isDivisible(i, five)){
+           sum+=i;
+        }
+      }
+      System.out.print(sum);
+    }
+
+    private static boolean isDivisible(int dividend, int divisor){
+      if(dividend % divisor == 0){
+        return true;
+      }else{
+        return false;
+      }
+    }
+}
